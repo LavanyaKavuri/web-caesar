@@ -6,7 +6,7 @@ app.config['DEBUG'] = True
 form =  """
  <!doctype html>
  <html>
-    <head>
+    
        <head>
         <style>
             form {{
@@ -24,7 +24,7 @@ form =  """
             }}
         </style>
     </head>
-    </head>
+    
     <body>
         <form method="Post">
           
@@ -50,7 +50,7 @@ def encrypt():
     rots = int(request.form['rot'])
     test = request.form['text']
     
-    return form.format(rotate_string(text, rots))
+    return form.format(rotate_string(test, rots))
 
 
 app.run()
